@@ -12,6 +12,8 @@ import android.text.style.ForegroundColorSpan
 import android.text.style.URLSpan
 import androidx.core.content.res.ResourcesCompat
 import com.example.ostrichp.R
+import com.example.ostrichp.enum.PhoneCountryCode
+import com.example.ostrichp.utils.Utils.getDigits
 
 object Utils {
 
@@ -63,9 +65,27 @@ object Utils {
         } else this
     }
 
+    fun getDigits(s: String?, ignoredChars: String = ""): String {
+        return s.orEmpty().filter { Character.isDigit(it) || ignoredChars.contains(it) }
+    }
+
 }
 
 fun String?.format2Lines(): String? {
     return if (this.orEmpty().contains('\n')) this
     else this?.replaceFirst(' ', '\n')
+}
+
+val String?.digits: String?
+    get() {
+        val d = getDigits(this)
+        return d.ifEmpty { null }
+    }
+
+fun String.trimLeadingZero(): String {
+    var text = this
+    while (text.startsWith('0')) {
+        text = text.substring(1)
+    }
+    return text
 }
