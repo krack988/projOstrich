@@ -36,7 +36,7 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -51,10 +51,10 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     // SplashScreen
-    implementation 'androidx.core:core-splashscreen:1.0.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
 
     //Coil
-    implementation "io.coil-kt:coil:2.2.2"
+    implementation "io.coil-kt:coil:2.4.0"
 
     // Network
     implementation 'com.squareup.moshi:moshi-kotlin:1.12.0'
@@ -64,8 +64,8 @@ dependencies {
     implementation 'com.squareup.moshi:moshi:1.14.0'
 
     //hilt
-    implementation 'com.google.dagger:hilt-android:2.45'
+    implementation 'com.google.dagger:hilt-android:2.46.1'
     annotationProcessor 'com.google.dagger:hilt-compiler:2.45'
 
-    implementation "com.airbnb.android:lottie:5.2.0"
+    implementation "com.airbnb.android:lottie:6.0.0"
 }
